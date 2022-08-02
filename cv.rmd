@@ -1,10 +1,11 @@
 ---
 title: "Adam N. Bozman's CV"
+subtitle: "Department of Mangement Science"
 author: Adam N. Bozman
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
-    value: true
+    value: FALSE
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
@@ -53,11 +54,11 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 
 ```{r}
-# if(params$pdf_mode){
-#   cat("View this CV online with links at _https://www.adambozman.com/about/cv.html/_")
-# } else {
+if(params$pdf_mode){
+  cat("View this CV online with links at _https://www.adambozman.com/about/cv.html/")
+} else {
 cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/adam-bozman/curriculum-vitae/cv.pdf)")
-# }
+}
 ```
 
 Contact {#contact}
@@ -106,7 +107,8 @@ Research Interests {data-icon=bookmark}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('research_interests')
+CV %<>% print_text_block("interests")
+
 ```
 
 
@@ -231,7 +233,7 @@ CV %<>% print_section('journal_publications')
 ```
 
 
-Conference Presentations {data-icon=file-powerpoint}
+Conference Presentations {data-icon=paper-plane}
 --------------------------------------------------------------------------------
 
 ```{r}
