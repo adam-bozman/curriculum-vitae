@@ -101,12 +101,34 @@ CV %<>% print_text_block("intro")
 ```
 
 
+Research Interests {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('research_interests')
+```
+
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('education')
+```
+
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('teaching_experience_aside') -->
+<!-- ``` -->
+<!-- ::: -->
+
+```{r}
+CV %<>% print_section('teaching_positions')
 ```
 
 
@@ -123,82 +145,109 @@ CV %<>% print_section('research_positions')
 Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-::: aside
-```{r}
-CV %<>% print_text_block('industy_experience_aside')
-```
-:::
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('industy_experience_aside') -->
+<!-- ``` -->
+<!-- ::: -->
 
 ```{r}
 CV %<>% print_section('industry_positions')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('teaching_positions')
-```
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
 
 
-
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('data_science_writing_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('data_science_writings')
-```
-
-
-
-Selected Press (About)  {data-icon=newspaper}
+Honors and Awards {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('about_me_press')
+CV %<>% print_section('honors_and_awards')
 ```
 
 
-<br>
-<br>
-
-
-Selected Press (By)  {data-icon=newspaper}
+Patents {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('by_me_press')
+CV %<>% print_section('patents')
 ```
 
 
 
-Selected Publications, Posters, and Talks {data-icon=book}
+Service {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('academic_articles')
+CV %<>% print_section('service')
 ```
 
 
+<!-- Selected Data Science Writing {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- <!-- ::: aside --> -->
+<!-- <!-- ```{r} --> -->
+<!-- <!-- CV %<>% print_text_block('data_science_writing_aside') --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- ::: --> -->
+
+<!-- ```{r} -->
+<!-- CV %<>% print_section('data_science_writings') -->
+<!-- ``` -->
+
+
+
+<!-- Selected Press (About)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- CV %<>% print_section('about_me_press') -->
+<!-- ``` -->
+
+
+<!-- <br> -->
+<!-- <br> -->
+
+
+<!-- Selected Press (By)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- CV %<>% print_section('by_me_press') -->
+<!-- ``` -->
+
+
+
+Working Papers {data-icon=book}
+--------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_links()
+CV %<>% print_section('working_papers')
 ```
+
+
+
+Conference Papers {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('conference_papers')
+```
+
+
+
+Journal Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('journal_publications')
+```
+
+<!-- ```{r} -->
+<!-- CV %<>% print_links() -->
+<!-- ``` -->
 
