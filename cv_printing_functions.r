@@ -15,7 +15,7 @@
 #'   is the sheet publicly available? (Makes authorization easier.)
 #' @return A new `CV_Printer` object.
 create_CV_object <-  function(data_location,
-                              pdf_mode = TRUE,
+                              pdf_mode = FALSE,
                               sheet_is_publicly_readable = TRUE) {
 
   cv <- list(
@@ -40,7 +40,7 @@ create_CV_object <-  function(data_location,
     read_gsheet <- function(sheet_id){
       googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
     }
-    cv$entries_data  <- read_gsheet(sheet_id = "positions")
+    cv$entries_data  <- read_gsheet(sheet_id = "entries")
     cv$skills        <- read_gsheet(sheet_id = "language_skills")
     cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
     cv$contact_info  <- read_gsheet(sheet_id = "contact_info")

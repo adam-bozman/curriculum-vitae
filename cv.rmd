@@ -1,11 +1,10 @@
 ---
 title: "Adam N. Bozman's CV"
-subtitle: "Department of Mangement Science"
 author: Adam N. Bozman
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
-    value: FALSE
+    value: true
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
@@ -55,9 +54,9 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _https://www.adambozman.com/about/cv.html/")
+  cat("View this CV online with links at _https://www.adambozman.com/about/cv.html/_")
 } else {
-cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/adam-bozman/curriculum-vitae/cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://www.adambozman.com/about/cv.pdf/)")
 }
 ```
 
@@ -84,7 +83,7 @@ Disclaimer {#disclaimer}
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
 
-The source code is available [on github.com/adam-bozman/cv](https://github.com/adam-bozman/curriculum-vitae).
+The source code is available [on github.com/nstrayer/cv](https://github.com/adam-bozman/curriculum-vitae).
 
 Last updated on `r Sys.Date()`.
 
@@ -103,36 +102,11 @@ CV %<>% print_text_block("intro")
 
 
 
-Research Interests {data-icon=bookmark}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_text_block("interests")
-
-```
-
-
-
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('education')
-```
-
-
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-<!-- ::: aside -->
-<!-- ```{r} -->
-<!-- CV %<>% print_text_block('teaching_experience_aside') -->
-<!-- ``` -->
-<!-- ::: -->
-
-```{r}
-CV %<>% print_section('teaching_positions')
 ```
 
 
@@ -149,93 +123,82 @@ CV %<>% print_section('research_positions')
 Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-<!-- ::: aside -->
-<!-- ```{r} -->
-<!-- CV %<>% print_text_block('industry_experience_aside') -->
-<!-- ``` -->
-<!-- ::: -->
+::: aside
+```{r}
+CV %<>% print_text_block('industy_experience_aside')
+```
+:::
 
 ```{r}
 CV %<>% print_section('industry_positions')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
-<!-- <br> -->
+<br>
+<br>
+<br>
 
-<!-- Selected Data Science Writing {data-icon=chart-line} -->
-<!-- -------------------------------------------------------------------------------- -->
-
-<!-- ::: aside -->
-<!-- ```{r} -->
-<!-- CV %<>% print_text_block('data_science_writing_aside') -->
-<!-- ``` -->
-<!-- ::: -->
-
-<!-- ```{r} -->
-<!-- CV %<>% print_section('data_science_writings') -->
-<!-- ``` -->
-
-
-<!-- Selected Press (About)  {data-icon=newspaper} -->
-<!-- -------------------------------------------------------------------------------- -->
-
-<!-- ```{r} -->
-<!-- CV %<>% print_section('about_me_press') -->
-<!-- ``` -->
-
-
-<!-- Selected Press (By)  {data-icon=newspaper} -->
-<!-- -------------------------------------------------------------------------------- -->
-
-<!-- ```{r} -->
-<!-- CV %<>% print_section('by_me_press') -->
-<!-- ``` -->
-
-
-Selected Honors and Awards {data-icon=trophy}
+Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
+::: aside
 ```{r}
-CV %<>% print_section('honors_and_awards')
+CV %<>% print_text_block('teaching_experience_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('teaching_positions')
 ```
 
 
-Patents {data-icon=gavel}
+
+Selected Data Science Writing {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
+::: aside
+```{r}
+CV %<>% print_text_block('data_science_writing_aside')
+```
+:::
 
 ```{r}
-CV %<>% print_section('patents')
+CV %<>% print_section('data_science_writings')
 ```
 
 
-Professional Service {data-icon=gift}
+
+Selected Press (About)  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('professional_service')
+CV %<>% print_section('about_me_press')
 ```
 
 
-Community Service {data-icon=address-book}
+<br>
+<br>
+
+
+Selected Press (By)  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('community_service')
+CV %<>% print_section('by_me_press')
 ```
 
 
-Journal Publications {data-icon=book}
+
+Selected Publications, Posters, and Talks {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('journal_publications')
+CV %<>% print_section('academic_articles')
 ```
 
 
-Conference Presentations {data-icon=paper-plane}
---------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('conference_papers')
+CV %<>% print_links()
 ```
+
